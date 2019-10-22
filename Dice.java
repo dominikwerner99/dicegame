@@ -1,14 +1,11 @@
-package dice;
+package game;
 import java.util.Random;
 
-public class Dice {
-    
+public class Game {
     public static void main(String[] args) {
         
         Random dice = new Random();
         Player player = new Player();
-        player.setName(null); // jeśli nie___________, to można nadal wstawić null jako parametr
-        //player.dice = null; // PUSTA REFERENCJA, dice - public -> program się wywala (null - brak obiektu, pustka nie ma metody nextInt)
         
         int number;
         int guess;
@@ -24,17 +21,4 @@ public class Dice {
         
         System.out.println("Brawo!");
     }
-    
 }
-// klasa jest definicją typu (obiektowego)
-// większość typów w Javie to typy obiektowe (np. Random)
-// traktować klasę jako TYP (obiektowy)
-// System.out.println() [Klasa.typ.funkcja()]
-// PLIK Game i PLIK Player są w PAKIECIE game
-
-// KLASY to pliki
-// PAKIETY to katalogi
-
-// REFAKTORYZACJA -  
-
-// klasy zawsze tworzyć jako nowy plik
