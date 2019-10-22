@@ -1,17 +1,22 @@
-package dice;
+package game;
 import java.util.Random;
 
 public class Player {
-    private Random dice = new Random(); // POLE klasy - jest tworzony na początku i usuwany, gdy nie ma już referencji
-                                        // pamięcią zarządza GARBAGE COLLECTOR
-    private String name;
+    private Random dice = new Random();
+    private String name = "Anonim";
     
-    public void setName(String name) {  // nazwa parametru powinna być identyczna z nazwą pola
+    Player() {}
+    
+    Player(String name) {
+        setName(name);
+    }
+    
+    public void setName(String name) {
         
-        if(name != null) {
-            this.name = name;   // "this" przyjmuje wartość obiektu, na którym jest wywoływana metoda
+        if(name != null && !name.isEmpty()) {
+            this.name = name;
         } else {
-            System.out.println("nie może być null");
+            System.err.println("Nieprawidłowe imię");
         }
         
     }
