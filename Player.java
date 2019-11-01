@@ -1,31 +1,31 @@
 package game;
 import java.util.Random;
 
-public class Player {
+public abstract class Player {
+    
     private Random dice = new Random();
     private String name = "Anonim";
-    
-    Player() {}
-    
-    Player(String name) {
+
+    public Player() {
+    }
+
+    public Player(String name) {
         setName(name);
     }
-    
+
     public void setName(String name) {
-        
+
         if(name != null && !name.isEmpty()) {
             this.name = name;
         } else {
             System.err.println("Nieprawidłowe imię");
         }
-        
     }
     
     public String getName() {
         return name;
     }
+
+    public abstract int guess();
     
-    public int guess() {
-        return dice.nextInt(6) + 1;
-    }
 }
