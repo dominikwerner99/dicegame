@@ -1,9 +1,9 @@
 package game;
-import java.util.Random;
+//import java.util.Random;
 
 public abstract class Player {
     
-    private Random dice = new Random();
+    //private Random dice = new Random();
     private String name = "Anonim";
 
     public Player() {
